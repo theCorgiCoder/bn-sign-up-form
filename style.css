@@ -98,11 +98,9 @@ input {
   color: red;
 }
 
-#do_not_match {
-  display: none;
-}
-
-#empty_field {
+#do_not_match,
+#empty_field,
+#min_max {
   display: none;
 }
 

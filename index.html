@@ -41,7 +41,12 @@
         </div>
         <div>
           <label for="phone_number">Phone Number:</label>
-          <input type="tel" name="Phone number" id="phone_number" />
+          <input
+            type="tel"
+            name="Phone number"
+            id="phone_number"
+            maxlength="12"
+          />
         </div>
         <div>
           <label for="date">Date for Event:</label>
@@ -53,15 +58,28 @@
             type="number"
             name="party_size"
             id="party_size"
-            placeholder="0"
+            min="1"
+            max="12"
+            value="0"
             required
           />
         </div>
         <div>
           <label for="password">Password:</label>
-          <input type="password" name="password" id="password" required />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            minlength="8"
+            maxlength="22"
+            onkeyup="minimumLength()"
+            required
+          />
           <p class="error" id="do_not_match">*Passwords do not match</p>
           <p class="error" id="empty_field">*Password field is empty</p>
+          <p class="error" id="min_max">
+            *Password must be between 8-22 characters
+          </p>
         </div>
         <div>
           <label for="password">Confirm Password:</label>
@@ -69,6 +87,8 @@
             type="password"
             name="confirm password"
             id="confirm_password"
+            minlength="8"
+            maxlength="22"
             onkeyup="passwordValidation()"
             required
           />
