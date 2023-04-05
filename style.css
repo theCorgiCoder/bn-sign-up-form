@@ -61,8 +61,15 @@ main {
   padding: 2em;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 form {
-  flex: 2;
+  flex: 3;
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 1fr;
