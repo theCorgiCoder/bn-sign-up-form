@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Nosifer&family=Roboto+Condensed:wght@400;700&display=swap");
+
+* {
+  /* border: 1px solid red; */
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+:root {
+  --red-color: rgb(155, 10, 10);
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  width: 40vw;
+  height: 100%;
+  background-image: url("./assets/images/spooky_forest_alex_foret.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vh;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.title {
+  word-wrap: break-word;
+}
+
+.title span {
+  font-family: "Nosifer", cursive;
+  color: var(--red-color);
+}
+
+.logo {
+  width: 80px;
+}
+
+main {
+  display: flex;
+  width: 60vw;
+  flex-direction: column;
+  background-color: rgb(224, 224, 224);
+}
+
+.header,
+.footer {
+  flex: 1;
+  padding: 2em;
+}
+
+form {
+  flex: 2;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  background-color: #fff;
+  padding: 2em;
+  overflow: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw / 7);
+}
+
+form label {
+  font-weight: bold;
+  color: var(--red-color);
+}
+
+input {
+  border: 2px solid rgb(214, 214, 214);
+  border-radius: 0.2rem;
+  height: 1.5rem;
+  padding: 5px 10px 5px 10px;
+  color: rgb(207, 18, 18);
+}
+
+.error {
+  font-size: 0.8rem;
+  margin: 0.5em 0 0.5em 0;
+  color: red;
+}
+
+#do_not_match {
+  display: none;
+}
+
+#empty_field {
+  display: none;
+}
+
+button {
+  width: 10em;
+  padding: 10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  background-color: var(--red-color);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: red;
+}
+
+.login {
+  text-decoration: none;
+  color: red;
+}
