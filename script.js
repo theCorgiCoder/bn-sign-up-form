@@ -30,8 +30,6 @@ function passwordValidation() {
   }
 }
 
-passwordValidation();
-
 // function formValidation() {
 //   return console.log("Form button pressed!!!");
 // }
