@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign up Form</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./scripts/script.js" defer></script>
   </head>
   <body>
-    <header>
+    <aside>
       <div class="banner">
         <img src="./assets/icons/skull_icon.svg" class="logo" alt="skull" />
         <h1 class="title"><span>NOPE</span> Experiences</h1>
       </div>
-    </header>
+    </aside>
     <main>
       <section class="header">
         <h1>
@@ -26,25 +26,25 @@
           Sign up below to start crafting you're very own NOPE Experience today!
         </h1>
       </section>
-      <form action="http://httpbin.org/post" method="post">
+      <form action="#" method="post" class="register-form" id="register-form">
         <div>
-          <label for="first_name">First Name:</label>
-          <input type="text" name="First name" id="first_name" required />
+          <label for="first-name">First Name:</label>
+          <input type="text" name="First name" id="first-name" required />
         </div>
         <div>
-          <label for="last_name">Last Name:</label>
-          <input type="text" name="Last name" id="last_name" />
+          <label for="last-name">Last Name:</label>
+          <input type="text" name="Last name" id="last-name" />
         </div>
         <div>
           <label for="email">Email:</label>
           <input type="email" name="email" id="email" required />
         </div>
         <div>
-          <label for="phone_number">Phone Number:</label>
+          <label for="phone-number">Phone Number:</label>
           <input
             type="tel"
             name="Phone number"
-            id="phone_number"
+            id="phone-number"
             maxlength="12"
           />
         </div>
@@ -57,9 +57,9 @@
           <input
             type="number"
             name="party_size"
-            id="party_size"
+            id="party-size"
             min="1"
-            max="12"
+            max="8"
             value="0"
             required
           />
@@ -70,32 +70,29 @@
             type="password"
             name="password"
             id="password"
-            minlength="8"
-            maxlength="22"
-            onkeyup="minimumLength()"
+            minlength="6"
+            maxlength="12"
             required
           />
-          <p class="error" id="do_not_match">*Passwords do not match</p>
-          <p class="error" id="empty_field">*Password field is empty</p>
-          <p class="error" id="min_max">
-            *Password must be between 8-22 characters
-          </p>
+          <div id="error"></div>
         </div>
         <div>
           <label for="password">Confirm Password:</label>
           <input
             type="password"
             name="confirm password"
-            id="confirm_password"
-            minlength="8"
-            maxlength="22"
-            onkeyup="passwordValidation()"
+            id="confirm-password"
+            minlength="6"
+            maxlength="14"
             required
           />
+          <div id="error"></div>
         </div>
       </form>
       <section class="footer">
-        <button type="submit" id="create_account_btn">Create Account</button>
+        <button type="submit" id="create-account-btn" form="register-form">
+          Create Account
+        </button>
         <p>Already have an account? <a href="#" class="login">Log in</a></p>
       </section>
     </main>
