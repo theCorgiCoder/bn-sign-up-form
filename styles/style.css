@@ -96,6 +96,11 @@ input {
   color: var(--red-color);
 }
 
+input::placeholder {
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.5);
+}
+
 #error {
   font-size: 0.8rem;
   padding-top: 5px;
