@@ -1,6 +1,7 @@
 const form = document.getElementById("register-form");
 const pass1 = document.getElementById("password");
 const pass2 = document.getElementById("confirm-password");
+const phone = document.getElementById("phone-number");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();

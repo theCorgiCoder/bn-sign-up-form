@@ -34,6 +34,8 @@
             name="First name"
             id="first-name"
             placeholder="John"
+            title="Please only enter characters."
+            pattern="[A-Za-z]{1,32}"
             required
           />
         </div>
@@ -44,6 +46,8 @@
             name="Last name"
             id="last-name"
             placeholder="Wick"
+            title="Please only enter characters."
+            pattern="[A-Za-z]{1,32}"
             required
           />
         </div>
@@ -61,11 +65,15 @@
           <label for="phone-number">Phone Number:</label>
           <input
             type="tel"
+            title="Please only enter numbers."
             name="Phone number"
             id="phone-number"
+            minlength="6"
             maxlength="12"
-            placeholder="121456789123"
+            pattern="[0-9]+"
+            placeholder="000000666"
           />
+          <span id="error"></span>
         </div>
         <div>
           <label for="date">*Date for Event:</label>
@@ -84,7 +92,7 @@
           />
         </div>
         <div>
-          <label for="password">*Password:</label>
+          <label for="password">*Password (6-12 characters):</label>
           <input
             type="password"
             name="password"
