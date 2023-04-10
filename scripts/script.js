@@ -8,7 +8,6 @@ document.getElementById("date").min = new Date().toISOString().split("T")[0];
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   validateInput();
-  validateDate();
 });
 
 const setError = (element, message) => {
