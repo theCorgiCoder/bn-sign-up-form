@@ -103,7 +103,7 @@ input {
   border: 2px solid var(--gray-color);
   border-radius: 0.2rem;
   height: 1.5rem;
-  width: 100%;
+  width: 25vw;
   padding: 5px 10px 5px 10px;
   color: var(--red-color);
 }
@@ -159,14 +159,10 @@ button:hover {
   body {
     flex-direction: column;
   }
-  aside {
-    height: 20vh;
-    width: 100vw;
-  }
 
+  aside,
   main {
-    width: 100vw;
-    height: 80vh;
+    width: 100%;
   }
 
   .register-form {
@@ -185,5 +181,15 @@ button:hover {
 
 @media only screen and (max-width: 600px) {
   .input-container {
+    grid-template-columns: 1fr;
+  }
+
+  aside,
+  main {
+    width: 100%;
+  }
+
+  input {
+    width: 50vw;
   }
 }
