@@ -2,6 +2,9 @@ const form = document.getElementById("register-form");
 const pass1 = document.getElementById("password");
 const pass2 = document.getElementById("confirm-password");
 
+// Prevents dates before today being selectable
+document.getElementById("date").min = new Date().toISOString().split("T")[0];
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   validateInput();
